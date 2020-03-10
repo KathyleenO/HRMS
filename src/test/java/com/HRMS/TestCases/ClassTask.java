@@ -1,9 +1,10 @@
 package com.HRMS.TestCases;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.HRMS.Pages.AddEmployeeElements;
-import com.HRMS.Pages.DashBoard;
+import com.HRMS.Pages.DashBoardPageElements;
 import com.HRMS.Pages.LoginPageElementsWithFindBY;
 import com.HRMS.Pages.PIMOptionsElements;
 import com.HRMS.Utils.CommonMethods;
@@ -27,7 +28,7 @@ Step 5: verify employee has been added successfully
 		sendText(login.username,"admin");
 		sendText(login.password,"Hum@nhrm123");
 		click(login.loginBtn);
-		DashBoard use=new DashBoard();
+		DashBoardPageElements use=new DashBoardPageElements();
 		click(use.PIMbtn);
 		PIMOptionsElements add=new PIMOptionsElements();
 		click(add.addEmployeeBtn);

@@ -2,6 +2,8 @@ package com.HRMS.Utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -15,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.HRMS.TestBase.BaseClass;
+
 
 //Command o==> for Mac to see all methods 
 public class CommonMethods extends BaseClass {
@@ -159,16 +162,37 @@ public class CommonMethods extends BaseClass {
 	 * This method will take a screenshot
 	 * @param fileName
 	 */
-	public static void takesScreenshot(String fileName) {
+	public static String takesScreenshot(String fileName) {
+//		Date date=new Date();
+//		SimpleDateFormat sdf=new SimpleDateFormat("MM/dd/yyyy/hh:mm:ss");
+//		String timeStamp=sdf.format(date.getTime());
+//		
+//		TakesScreenshot ts=(TakesScreenshot)driver;
+//		File file=ts.getScreenshotAs(OutputType.FILE);
+//		String screenshotFile=Constants.SCREENSHOTS_FILEPATH+fileName+timeStamp+".png";
+//		try {
+//			FileUtils.copyFile(file, new File(screenshotFile));
+//		}catch(IOException e) {
+//			System.out.println("Cannot Take ScreenShot");
+//		}
+//		
+//		return screenshotFile;
 		
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File file=ts.getScreenshotAs(OutputType.FILE);
+		Date date=new Date();
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy_MMdd_HHmmss");
+		String timeStamp=sdf.format(date.getTime());
+		
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		String scrshotFile=Constants.SCREENSHOTS_FILEPATH+fileName+timeStamp+".png";
 		
 		try {
-			FileUtils.copyFile(file, new File("taskScreenshots/"+fileName+".png"));
-		}catch(IOException e) {
-			System.out.println("Cannot Take ScreenShot");
+			FileUtils.copyFile(file, new File(scrshotFile));
+		} catch (IOException e) {
+			System.out.println("Cannot take a screenshot");
 		}
+		
+		return scrshotFile;
 		
 	}
 	/**
@@ -180,7 +204,13 @@ public class CommonMethods extends BaseClass {
 	public static void sendText(WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
+		
+		
 	}
+	
+	
+	
+
 
 	/**
 	 * This method will create an Object of WebDriverWait

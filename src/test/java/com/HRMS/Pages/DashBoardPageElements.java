@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.HRMS.TestBase.BaseClass;
 import com.HRMS.Utils.CommonMethods;
 
-public class DashBoard extends CommonMethods {
+public class DashBoardPageElements extends CommonMethods {
 
 	
 	@FindBy(linkText="Leave")
@@ -23,19 +23,19 @@ public class DashBoard extends CommonMethods {
 	public WebElement addEmployeeBtn;
 	
 	
-	public DashBoard() {
+	public DashBoardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
 	
 	public void navigateToLeaveList() {
-		click(leaveLnk);
-		click(leaveList);
+		jsCLick(leaveLnk);
+		jsCLick(leaveList);
 		
 	}
 	
 	public void  addEmployee() {
-		click(PIMbtn);
-		click(addEmployeeBtn);
+		jsCLick(PIMbtn);
+		jsCLick(addEmployeeBtn);
 		
 		
 	}

@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Practice.PropertiesDemo">
+      <class name="com.HRMS.TestCases.AddEmployeeTest">
         <methods>
-          <include name="read"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="addeEmployee"/>
+          <include name="writeReport"/>
+          <include name="generateReports"/>
         </methods>
-      </class> <!-- com.Practice.PropertiesDemo -->
+      </class> <!-- com.HRMS.TestCases.AddEmployeeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

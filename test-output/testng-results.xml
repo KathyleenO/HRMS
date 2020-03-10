@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-19T15:02:32 EST" name="Default suite" finished-at="2020-01-19T15:02:32 EST" duration-ms="85">
+  <suite started-at="2020-01-28T16:35:29 EST" name="Default suite" finished-at="2020-01-28T16:35:30 EST" duration-ms="1328">
     <groups>
+      <group name="regression">
+        <method signature="AddEmployeeTest.addeEmployee(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HRMS.TestCases.AddEmployeeTest@69930714]" name="addeEmployee" class="com.HRMS.TestCases.AddEmployeeTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2020-01-19T15:02:32 EST" name="Default test" finished-at="2020-01-19T15:02:32 EST" duration-ms="85">
-      <class name="com.Practice.PropertiesDemo">
-        <test-method signature="read()[pri:0, instance:com.Practice.PropertiesDemo@568bf312]" started-at="2020-01-19T15:02:32 EST" name="read" finished-at="2020-01-19T15:02:32 EST" duration-ms="28" status="PASS">
+    <test started-at="2020-01-28T16:35:29 EST" name="Default test" finished-at="2020-01-28T16:35:30 EST" duration-ms="1328">
+      <class name="com.HRMS.TestCases.AddEmployeeTest">
+        <test-method is-config="true" signature="generateReports()[pri:0, instance:com.HRMS.TestCases.AddEmployeeTest@69930714]" started-at="2020-01-28T16:35:29 EST" name="generateReports" finished-at="2020-01-28T16:35:29 EST" duration-ms="299" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- read -->
-      </class> <!-- com.Practice.PropertiesDemo -->
+        </test-method> <!-- generateReports -->
+        <test-method signature="addeEmployee(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HRMS.TestCases.AddEmployeeTest@69930714]" started-at="2020-01-28T16:35:30 EST" name="addeEmployee" data-provider="getData" finished-at="2020-01-28T16:35:30 EST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:820)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:771)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+at com.HRMS.Utils.ExcelUtility.colsCount(ExcelUtility.java:35)
+at com.HRMS.Utils.ExcelUtility.excelIntoArray(ExcelUtility.java:55)
+at com.HRMS.TestCases.AddEmployeeTest.getData(AddEmployeeTest.java:49)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addeEmployee -->
+        <test-method is-config="true" signature="writeReport()[pri:0, instance:com.HRMS.TestCases.AddEmployeeTest@69930714]" started-at="2020-01-28T16:35:30 EST" name="writeReport" finished-at="2020-01-28T16:35:30 EST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReport -->
+      </class> <!-- com.HRMS.TestCases.AddEmployeeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
